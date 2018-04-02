@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>Keyboard Tester</title>
+<script type="text/javascript">
+function handleKeyPress(event)
+{
+
+
+
+	
+	var code=event.keyCode?event.keyCode:event.which;
+	if(code==16||code==17||code==18)
+	{
+		var add=code+'a'
+		
+			document.getElementById(add).style.backgroundColor="green";
+	}
+	document.getElementById(code).style.backgroundColor="green";
+	audio = document.getElementById('audio')
+	audio.play()
+	return false
+}
+</script>
+<link rel="shortcut icon" href="data:image/png;base64,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">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<audio id="audio" src="http://www.freesfx.co.uk/rx2/mp3s/6/18660_1464810669.mp3" ></audio>
+
+</head>
+
+<body onkeypress="return false" onkeydown="return handleKeyPress(event)">
+<h1 align="center">Keyboard Tester</h1>
+
+<div id="container">
+    <ul id="keyboard">
+	<li class="symbol" id='27'>Esc</li>
+        <li class="symbol" id='112'>F1</li>
+        <li class="symbol" id='113'>F2</li>
+        <li class="symbol" id='114'>F3</li>
+        <li class="symbol" id='115'>F4</li>
+        <li class="symbol" id='116'>F5</li>
+        <li class="symbol" id='117'>F6</li>
+        <li class="symbol" id='118'>F7</li>
+        <li class="symbol" id='119'>F8</li>
+        <li class="symbol" id='120'>F9</li>
+        <li class="symbol" id='121'>F10</li>
+        <li class="symbol" id='122'>F11</li>
+        <li class="symbol" id='123'>F12</li>
+        <li class="delete lastitem" id='46'>Delete</li>
+		<li class="symbol" id='192'>`</li>
+        <li class="symbol" id='49'>1</li>
+        <li class="symbol" id='50'>2</li>
+        <li class="symbol" id='51'>3</li>
+        <li class="symbol" id='52'>4</li>
+        <li class="symbol" id='53'>5</li>
+        <li class="symbol" id='54'>6</li>
+        <li class="symbol" id='55'>7</li>
+        <li class="symbol" id='56'>8</li>
+        <li class="symbol" id='57'>9</li>
+        <li class="symbol" id='48'>0</li>
+        <li class="symbol" id='189'>-</li>
+        <li class="symbol" id='187'>=</li>
+        <li class="delete lastitem" id='8'>backspace</li>
+        <li class="tab" id='9'>tab</li>
+        <li class="letter" id='81'>q</li>
+        <li class="letter" id='87'>w</li>
+        <li class="letter" id='69'>e</li>
+        <li class="letter" id='82'>r</li>
+        <li class="letter" id='84'>t</li>
+        <li class="letter" id='89'>y</li>
+        <li class="letter" id='85'>u</li>
+        <li class="letter" id='73'>i</li>
+        <li class="letter" id='79'>o</li>
+        <li class="letter" id='80'>p</li>
+        <li class="symbol" id='219'>[</li>
+        <li class="symbol" id='221'>]</li>
+        <li class="symbol lastitem" id='220'>\</li>
+        <li class="capslock" id='20'>caps lock</li>
+        <li class="letter" id='65'>a</li>
+        <li class="letter" id='83'>s</li>
+        <li class="letter" id='68'>d</li>
+        <li class="letter" id='70'>f</li>
+        <li class="letter" id='71'>g</li>
+        <li class="letter" id='72'>h</li>
+        <li class="letter" id='74'>j</li>
+        <li class="letter" id='75'>k</li>
+        <li class="letter" id='76'>l</li>
+        <li class="symbol" id='186'>;</li>
+        <li class="symbol" id='222'>'</li>
+        <li class="return lastitem" id='13'>Enter</li>
+        <li class="left-shift" id='16'>shift</li>
+        <li class="letter" id='90'>z</li>
+        <li class="letter" id='88'>x</li>
+        <li class="letter" id='67'>c</li>
+        <li class="letter" id='86'>v</li>
+        <li class="letter" id='66'>b</li>
+        <li class="letter" id='78'>n</li>
+        <li class="letter" id='77'>m</li>
+        <li class="symbol" id='188'>,</li>
+        <li class="symbol" id='190'>.</li>
+        <li class="symbol" id='191'>/</li>
+        <li class="right-shift lastitem" id='16a'>shift</li>
+		<li class="left-shift" id='17'>Ctrl</li>
+		<li class="symbol" id='91'>Win</li>
+		<li class="symbol" id='18'>Alt</li>
+        <li class="space" id='32'>&nbsp;</li>
+		<li class="symbol" id='18a'>Alt</li>
+		<li class="right-ctrl" id='17a'>Ctrl</li>
+		<li class='symbol'></li>
+		<li class="symbol" id='38'>Up</li>
+		<li class='symbol'></li>
+		<li class="blank" id=''></li>
+		<li class="symbol" id='37'>Left</li>
+		<li class="symbol" id='40'>Down</li>
+		<li class="symbol" id='39'>Right</li>
+		
+    </ul>
+	<h2>A Simple Application to test the working condition of keys in the keyboard.</h2>
+</div>
+
+</body>
+</html>
