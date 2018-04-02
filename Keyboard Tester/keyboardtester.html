@@ -9,11 +9,12 @@ function handleKeyPress(event)
 
 	
 	var code=event.keyCode?event.keyCode:event.which;
+	//For Duplicate keys like ctrl,alt,shift.
 	if(code==16||code==17||code==18)
 	{
-		var add=code+'a'
+		var dupkey=code+'a'
 		
-			document.getElementById(add).style.backgroundColor="green";
+			document.getElementById(dupkey).style.backgroundColor="green";
 	}
 	document.getElementById(code).style.backgroundColor="green";
 	audio = document.getElementById('audio')
